@@ -1,0 +1,39 @@
+{
+  "name": "trackmaster-vue",
+  "version": "1.0.0",
+  "description": "TrackMaster - Bulk Package Tracking System (Vue 3)",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "vue": "^3.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@vitejs/plugin-vue": "^4.5.0",
+    "@vue/eslint-config-typescript": "^12.0.0",
+    "@vue/tsconfig": "^0.5.1",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.56.0",
+    "eslint-plugin-vue": "^9.19.0",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.3.6",
+    "terser": "^5.42.0",
+    "typescript": "~5.3.0",
+    "vite": "^5.0.0",
+    "vue-tsc": "^1.8.25"
+  },
+  "keywords": [
+    "package-tracking",
+    "vue3",
+    "typescript",
+    "tailwindcss",
+    "wails"
+  ],
+  "author": "TrackMaster",
+  "license": "MIT"
+}
