@@ -52,9 +52,8 @@ export function EventsOnce(eventName, callback) {
     return EventsOnMultiple(eventName, callback, 1);
 }
 
-export function EventsEmit(eventName) {
-    let args = [eventName].slice.call(arguments);
-    return window.runtime.EventsEmit.apply(null, args);
+export function EventsEmit(...args) {
+    return window.runtime.EventsEmit(...args);
 }
 
 export function WindowReload() {

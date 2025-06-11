@@ -31,7 +31,11 @@
                 'relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:ring-offset-slate-900',
                 currentSettings.headlessMode ? 'bg-sky-500' : 'bg-slate-600'
               ]"
+              role="switch"
+              :aria-pressed="currentSettings.headlessMode.toString()"
+              aria-label="Toggle headless mode"
             >
+              <span class="sr-only">Toggle headless mode</span>
               <span
                 :class="[
                   'inline-block h-4 w-4 transform rounded-full bg-white transition-transform duration-200 ease-in-out',

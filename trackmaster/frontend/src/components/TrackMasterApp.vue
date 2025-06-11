@@ -139,6 +139,7 @@ import {
   TruckIcon,
   ClockIcon
 } from './icons/index'
+import { useToast } from 'vue-toastification'
 
 type PackageStatus = 'Pending' | 'Info' | 'In Transit' | 'Out for Delivery' | 'Delivered' | 'Exception' | 'Error'
 
@@ -251,15 +252,25 @@ const formatLastUpdated = (dateString?: string) => {
   }
 }
 
+const toast = useToast()
+
 const showToast = (message: string, type: 'success' | 'error' | 'warning' | 'info' = 'info', description?: string) => {
-  // Simple toast implementation - you can replace with a proper toast library
-  console.log(`${type.toUpperCase()}: ${message}${description ? ` - ${description}` : ''}`)
-  
-  // For now, we'll use browser alerts as placeholders
-  if (type === 'error') {
-    alert(`Error: ${message}`)
-  } else if (type === 'success') {
-    console.log(`✅ ${message}`)
+  // Use vue-toastification for notifications
+  const options = description ? { description } : undefined
+  switch (type) {
+    case 'success':
+      toast.success(message, options)
+      break
+    case 'error':
+      toast.error(message, options)
+      break
+    case 'warning':
+      toast.warning(message, options)
+      break
+    case 'info':
+    default:
+      toast.info(message, options)
+      break
   }
 }
 

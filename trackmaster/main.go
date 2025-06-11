@@ -8,6 +8,8 @@ import (
 	"github.com/wailsapp/wails/v2/pkg/options/assetserver"
 )
 
+//go:generate npm install
+//go:generate npm run build
 //go:embed all:frontend/dist
 var assets embed.FS
 
